@@ -14,4 +14,8 @@ public class MainApp {
     public static void HolaJose (){
         System.out.println("Hola Jose");
     }
+    public static void Holamundo(){
+        System.out.println ("Hola soy Laia");
+
+    }
 }
