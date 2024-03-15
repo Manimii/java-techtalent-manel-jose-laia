@@ -10,4 +10,8 @@ public class MainApp {
         System.out.println("Hola soy manel");
         
     }
+	
+    public static void HolaJose (){
+        System.out.println("Hola Jose");
+    }
 }
