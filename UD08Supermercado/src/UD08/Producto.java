@@ -7,7 +7,7 @@ public class Producto {
 	//comntario jose #2
 	//pruebas branch 
 	
-	
+	//metodo de manel
 	
 	
 }
