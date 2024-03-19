@@ -93,7 +93,7 @@ public class MainApp {
 	}
 
 	// Métodos de gestión de stock
-	public static void addStock(HashMap<String, HashMap> baseDeDatos) {
+	public static void addStock(ArrayList<Producto>baseDeDatos ) {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Nombre del producto:");
@@ -105,14 +105,10 @@ public class MainApp {
 		System.out.println("IVA del producto:");
 		double iva = sc.nextDouble();
 
-		HashMap<String, Object> producto = new HashMap<String, Object>();
-		producto.put("precio", precio);
-		producto.put("cantidad", cantidad);
-		producto.put("iva", iva);
-
-		baseDeDatos.put(nombre, producto);
+		baseDeDatos.add(new Producto(precio,iva,cantidad,nombre));
 
 	}
+
 
 	public static void comprobarProducto(HashMap<String, HashMap> baseDeDatos) {
 		Scanner sc = new Scanner(System.in);
