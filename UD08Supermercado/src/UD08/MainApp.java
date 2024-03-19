@@ -1,13 +1,14 @@
 package UD08;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class MainApp {
 
 	public static void main(String[] args) {
-		HashMap<String, HashMap> baseDeDatos = new HashMap<String, HashMap>();
-		HashMap<String, HashMap> carrito = new HashMap<String, HashMap>();
+		ArrayList<Producto> baseDeDatos = new ArrayList<Producto>();
+		ArrayList<Producto> carrito = new ArrayList<Producto>();
 
 		rellenarbaseDeDatos(baseDeDatos);
 		mostrarMenu(baseDeDatos, carrito);
