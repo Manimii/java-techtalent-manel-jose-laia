@@ -153,10 +153,9 @@ public class MainApp {
 	}
 
 	public static void mostrarCarrito(ArrayList<Producto> carrito) {
-		for (String i : carrito.keySet()) {
-			System.out.println(i + ": " + carrito.get(i));
+		for (Producto item : carrito) {
+			System.out.println("Producto" + item.toString());
 		}
-		System.out.println();
 	}
 
 	public static void confirmarCompra(ArrayList<Producto> carrito, ArrayList<Producto> baseDeDatos) {
