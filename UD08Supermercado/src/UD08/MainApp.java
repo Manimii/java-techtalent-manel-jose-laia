@@ -118,11 +118,10 @@ public class MainApp {
 
 	}
 
-	public static void mostrarStock(HashMap<String, HashMap> baseDeDatos) {
-		for (String i : baseDeDatos.keySet()) {
-			System.out.println(i + ": " + baseDeDatos.get(i));
+	public static void mostrarStock(ArrayList<Producto> baseDeDatos) {
+		for (Producto item : baseDeDatos) {
+			System.out.println("Producto" + item.toString());
 		}
-		System.out.println();
 	}
 
 	// Métodos de gestión de Compra
