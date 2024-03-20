@@ -1,4 +1,4 @@
-package TA8GRUPO;
+package UD08;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -229,7 +229,7 @@ public class MainApp {
 				if ((baseDeDatos.get(i).getNombre()).equalsIgnoreCase(nombre)) {
 					cantidadStock = baseDeDatos.get(i).getCantidad();
 					salir = true;
-					
+
 					cantidadActualizada = cantidadStock - cantidadCarrito;
 					baseDeDatos.get(i).setCantidad(cantidadActualizada);
 				}
