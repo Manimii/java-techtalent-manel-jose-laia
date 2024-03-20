@@ -113,7 +113,13 @@ public class MainApp {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Qué producto quieres comprobar?");
 		String producto = sc.nextLine();
-		System.out.println(baseDeDatos.get(producto) + "\n");
+		boolean salir = false;
+		for (int i = 0; i < baseDeDatos.size() && !salir; i++) {
+			if ((baseDeDatos.get(i).getNombre()).equalsIgnoreCase(producto)) {
+				System.out.println(baseDeDatos.get(i).toString());
+				salir = true;
+			}
+		}
 
 	}
 
