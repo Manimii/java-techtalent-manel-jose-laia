@@ -138,17 +138,24 @@ public class MainApp {
 		String producto = sc.nextLine();
 		System.out.println("¿Cuántas unidades quieres añadir al carrito?");
 		int cantidad = sc.nextInt();
-		int cantidadMax = Integer.parseInt(baseDeDatos.get(producto).get("cantidad").toString());
+		boolean salir = false;
+		int cantidadMax = 0;
+		double precio = 0;
+		double iva = 0.21;
+		for (int i = 0; i < baseDeDatos.size() && !salir; i++) {
+			if ((baseDeDatos.get(i).getNombre()).equalsIgnoreCase(producto)) {
+				precio = baseDeDatos.get(i).getPrecio();
+				iva = baseDeDatos.get(i).getIva();
+				cantidadMax = baseDeDatos.get(i).getCantidad();
+				salir = true;
+			}
+		}
 		if (cantidad > cantidadMax) {
 			cantidad = cantidadMax;
 			System.out.println("No tenemos stock suficiente, solo puedes llevarte " + cantidad);
 		}
 
-		HashMap<String, Object> elemento = new HashMap<String, Object>();
-		elemento.put("cantidad", cantidad);
-		elemento.put("precio", baseDeDatos.get(producto).get("precio"));
-		elemento.put("IVA", baseDeDatos.get(producto).get("IVA"));
-		carrito.put(producto, elemento);
+		carrito.add(new Producto(precio, iva, cantidad, producto));
 
 	}
 
