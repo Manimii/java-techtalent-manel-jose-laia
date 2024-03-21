@@ -1,5 +1,7 @@
 package UD08;
 
+import java.text.DecimalFormat;
+
 public class Producto {
 
 	private double precio;
@@ -55,7 +57,9 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return nombre + ": [precio=" + precio + "€, iva=" + iva + ", cantidad=" + cantidad + "]";
+		DecimalFormat df = new DecimalFormat("0.00");
+		return nombre + ": [precio: " + df.format(precio) + "€, IVA: " + Math.round(iva * 100) + "%, cantidad: "
+				+ cantidad + "]";
 	}
 
 }
