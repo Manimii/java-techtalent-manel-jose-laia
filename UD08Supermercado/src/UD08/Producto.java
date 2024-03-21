@@ -55,7 +55,7 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return nombre + " [precio=" + precio + ", iva=" + iva + ", cantidad=" + cantidad + "]";
+		return nombre + ": [precio=" + precio + "€, iva=" + iva + ", cantidad=" + cantidad + "]";
 	}
 
 }
