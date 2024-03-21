@@ -58,7 +58,7 @@ public class Producto {
 	@Override
 	public String toString() {
 		DecimalFormat df = new DecimalFormat("0.00");
-		return nombre + ": [precio: " + df.format(precio) + "€, IVA: " + Math.round(iva * 100) + "%, cantidad: "
+		return nombre + ": [precio: " + df.format(precio) + "€ | IVA: " + Math.round(iva * 100) + "% | cantidad: "
 				+ cantidad + "]";
 	}
 
