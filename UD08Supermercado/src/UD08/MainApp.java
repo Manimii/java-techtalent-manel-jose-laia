@@ -125,7 +125,7 @@ public class MainApp {
 
 	public static void mostrarStock(ArrayList<Producto> baseDeDatos) {
 		for (Producto item : baseDeDatos) {
-			System.out.println("Producto" + item.toString());
+			System.out.println(item.toString());
 		}
 	}
 
@@ -161,7 +161,7 @@ public class MainApp {
 
 	public static void mostrarCarrito(ArrayList<Producto> carrito) {
 		for (Producto item : carrito) {
-			System.out.println("Producto" + item.toString());
+			System.out.println(item.toString());
 		}
 	}
 
