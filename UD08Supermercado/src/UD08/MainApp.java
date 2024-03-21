@@ -184,6 +184,9 @@ public class MainApp {
 			respuesta = sc.nextLine();
 			if (respuesta.equalsIgnoreCase("S")) {
 				hacerCompra(carrito, baseDeDatos);
+			} else {
+				System.out.println("Compra cancelada");
+				carrito.clear();
 			}
 		}
 	}
